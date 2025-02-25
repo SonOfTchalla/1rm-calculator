@@ -2,6 +2,7 @@
 let numEL = document.getElementById("num");
 let repsEL = document.getElementById("reps");
 let calcEL = document.getElementById("calc");
+let containerEL = document.getElementById("container");
 
 // function to calculate 1RM
 function calculateMax(weight, reps){
@@ -15,5 +16,7 @@ calcEL.addEventListener('click', function(){
     let reps = repsEL.value;
     let result = calculateMax(weight, reps);
 
-    
+    let max = document.createElement("p")
+    max.textContent = `Your One Rep Max is ${Math.round(result)} kg`
+    containerEL.appendChild(max) 
 })
