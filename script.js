@@ -11,12 +11,22 @@ function calculateMax(weight, reps){
     return weight / (1.0278 - 0.0278 * reps)
 }
 
-calcEL.addEventListener('click', function(){
-    let weight = numEL.value;
-    let reps = repsEL.value;
-    let result = calculateMax(weight, reps);
+// flag to determine if results is currently diaplayed
+let resultDisplayed = false;
 
-    let max = document.createElement("p")
-    max.textContent = `Your One Rep Max is ${Math.round(result)} kg`
-    containerEL.appendChild(max) 
+calcEL.addEventListener('click', function(){
+    //check if a result is already displayed
+    if(resultDisplayed == false)
+    {
+        let weight = numEL.value;
+        let reps = repsEL.value;
+        let result = calculateMax(weight, reps);
+
+        let max = document.createElement("p")
+        max.textContent = `Your One Rep Max is ${Math.round(result)} kg`
+        containerEL.appendChild(max) 
+
+        // set result displayed flag to true after diaplying result
+        resultDisplayed = true;
+    }
 })
