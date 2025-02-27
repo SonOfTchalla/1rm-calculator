@@ -23,18 +23,14 @@ calcEL.addEventListener('click', function(){
         let reps = repsEL.value;
         let result = calculateMax(weight, reps);
 
+        max.textContent = `Your One Rep Max is ${Math.round(result)} kg`
+
         //check if a result is already displayed
         if(resultDisplayed == false)
         {
-           
-            max.textContent = `Your One Rep Max is ${Math.round(result)} kg`
             containerEL.appendChild(max) 
 
             // set result displayed flag to true after diaplying result
             resultDisplayed = true;
-        }
-        else
-        {
-            max.textContent = `Your One Rep Max is ${Math.round(result)} kg`
         }
 })
