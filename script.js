@@ -4,6 +4,9 @@ let repsEL = document.getElementById("reps");
 let calcEL = document.getElementById("calc");
 let containerEL = document.getElementById("container");
 
+// Create element to display the user's max
+let max = document.createElement("p");
+
 // function to calculate 1RM
 function calculateMax(weight, reps){
     // calculating max using the Bryzycki equation 
@@ -15,18 +18,23 @@ function calculateMax(weight, reps){
 let resultDisplayed = false;
 
 calcEL.addEventListener('click', function(){
-    //check if a result is already displayed
-    if(resultDisplayed == false)
-    {
+    
         let weight = numEL.value;
         let reps = repsEL.value;
         let result = calculateMax(weight, reps);
 
-        let max = document.createElement("p")
-        max.textContent = `Your One Rep Max is ${Math.round(result)} kg`
-        containerEL.appendChild(max) 
+        //check if a result is already displayed
+        if(resultDisplayed == false)
+        {
+           
+            max.textContent = `Your One Rep Max is ${Math.round(result)} kg`
+            containerEL.appendChild(max) 
 
-        // set result displayed flag to true after diaplying result
-        resultDisplayed = true;
-    }
+            // set result displayed flag to true after diaplying result
+            resultDisplayed = true;
+        }
+        else
+        {
+            max.textContent = `Your One Rep Max is ${Math.round(result)} kg`
+        }
 })
