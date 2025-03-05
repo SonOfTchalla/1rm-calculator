@@ -7,6 +7,9 @@ let containerEL = document.getElementById("container");
 // Create element to display the user's max
 let max = document.createElement("p");
 
+// Create element to reset the form
+let reset = document.createElement("button");
+
 // function to calculate 1RM
 function calculateMax(weight, reps){
     // calculating max using the Bryzycki equation 
@@ -17,6 +20,7 @@ function calculateMax(weight, reps){
 // flag to determine if results is currently diaplayed
 let resultDisplayed = false;
 
+// event listener for calc button click
 calcEL.addEventListener('click', function(){
     
         let weight = numEL.value;
@@ -30,7 +34,20 @@ calcEL.addEventListener('click', function(){
         {
             containerEL.appendChild(max) 
 
+            // when results are displayed, add a reset button
+            reset.textContent = "Reset";
+            containerEL.appendChild(reset);
+
             // set result displayed flag to true after diaplying result
             resultDisplayed = true;
         }
+});
+
+// event listener for reset button click
+reset.addEventListener('click', function(){
+    numEL.value = null;
+    repsEL.value = null;
+    max.remove();
+    resultDisplayed = false;
+    reset.remove();
 })
