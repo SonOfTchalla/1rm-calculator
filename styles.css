@@ -3,6 +3,7 @@
     border: 0;
     padding: 0;
     margin: 0;
+    list-style-type: none;
 }
 
 body{
@@ -11,4 +12,24 @@ body{
 
 #logo{
     height: 24px;
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2em 4em;
+    border-bottom: 1px solid grey;
+    align-items: center;
+}
+
+#icons, #links{
+    display: flex;
+}
+
+#icons{
+    gap: 0.7rem;
+}
+
+#links{
+    gap: 2rem;
 }
