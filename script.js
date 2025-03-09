@@ -76,7 +76,7 @@ calcEL.addEventListener('click', function(){
             reset.remove();
             resultDisplayed = false;
 
-            warning.textContent = "Please put in valid weight and repitition values";
+            warning.textContent = "Please put in valid weight and repetition values";
             warning.id = "warning";
             containerEL.append(warning);
             warningDisplayed = true;
