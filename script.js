@@ -20,9 +20,13 @@ function calculateMax(weight, reps){
 // flag to determine if results is currently diaplayed
 let resultDisplayed = false;
 
+// flag to chheck if warning displayed
+let warningDisplayed = false;
+
 // event listener for calc button click
 calcEL.addEventListener('click', function(){
-    
+    if(numEL.value !=0 && repsEL.value != 0)
+    {
         let weight = numEL.value;
         let reps = repsEL.value;
         let result = calculateMax(weight, reps);
@@ -41,6 +45,16 @@ calcEL.addEventListener('click', function(){
             // set result displayed flag to true after diaplying result
             resultDisplayed = true;
         }
+    }
+    else{
+        if(!warningDisplayed)
+        {
+            let warning = document.createElement("p");
+            warning.textContent = "Please put in valid weight and repitition values";
+            containerEL.append(warning);
+            warningDisplayed = true;
+        }
+    }
 });
 
 // event listener for reset button click
