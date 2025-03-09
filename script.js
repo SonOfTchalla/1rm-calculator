@@ -32,23 +32,26 @@ calcEL.addEventListener('click', function(){
     {
         let weight = numEL.value;
         let reps = repsEL.value;
-        let result = calculateMax(weight, reps);
+        let result = Math.round(calculateMax(weight, reps));
 
-        max.textContent = `Your One Rep Max is ${Math.round(result)} kg. Based on the Brzycki formula.`
+        max.textContent = `Your One Rep Max is ${result} kg. Based on the Brzycki formula.`
 
         //check if a result is already displayed
         if(resultDisplayed == false)
         {
+            calcEL.remove();
+
+            // when results are displayed, add a reset button
+            reset.textContent = "Reset";
+            reset.id = "reset";
+            containerEL.appendChild(reset);
+
             //removes warning message if displayed and resets flag
             warning.remove();
             warningDisplayed = false;
 
             containerEL.appendChild(max) 
 
-            // when results are displayed, add a reset button
-            reset.textContent = "Reset";
-            reset.id = "reset";
-            containerEL.appendChild(reset);
 
             // set result displayed flag to true after diaplying result
             resultDisplayed = true;
@@ -77,4 +80,5 @@ reset.addEventListener('click', function(){
     max.remove();
     resultDisplayed = false;
     reset.remove();
+    containerEL.append(calcEL);
 })
