@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="container">
         <div id="navbar">
             <div id="icons">
                 <img id="logo" src="img/dumbbell-solid.svg">
@@ -24,28 +23,27 @@
             </div>
         </div>
 
-        <p id="text">"One rep max" means the maximum amount of weight you can lift for just one repetition of an exercise. Calculate your one rep max (1RM) on any lift below</p>
+        <div id="content">
+            <h3>
+                What is a One-Rep-Max?
+            </h3>
+            <p id="text">"One rep max" means the maximum amount of weight you can lift for just one repetition of an exercise</p>
+        </div>
+        
 
-        <label for="num" id="numLabel">Weight</label>
-        <input id="num" name="num" type="number">
+        <div id="container">
+            <h4>Calculate Your 1-Rep Max</h4>
+            <p>Enter the weight you lifted and the number of repetitions you performed to calculate your 1-rep max.</p>
+        
+            <label for="num" id="numLabel">Weight Lifted (kg or lbs)</label>
+            <input id="num" name="num" type="number">
 
 
-        <label for="reps" id="repsLabel">Repetition</label>
-        <select id="reps" name="reps">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
+            <label for="reps" id="repsLabel">Repetitions performed</label>
+            <input id="num" name="num" type="number">
 
-        <button id="calc">Calculate 1RM</button>
-    </div>
+            <button id="calc">Calculate</button>
+        </div>
 
     <script src="script.js"></script>
 </body>
