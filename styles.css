@@ -97,3 +97,12 @@ a{
     background-color: rgba(255, 6, 6, 0.932);
     font-size: medium;
 }
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2em 4em;
+    align-items: center;
+    background-color: #ccc;
+    border: none;
+}
