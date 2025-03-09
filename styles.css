@@ -38,6 +38,17 @@ body{
     /*border: 2px solid red;*/
     margin: 20px auto;
     text-align: center;
-    padding: 80px 0;
+    padding: 5rem 0;
     width: 50%;
+}
+
+#container{
+    border: 2px solid rgb(245, 240, 240);
+    border-radius: 5%;
+    width: 50%;
+    margin: 0 auto 200px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
