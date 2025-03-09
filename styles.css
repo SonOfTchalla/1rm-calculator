@@ -60,7 +60,7 @@ footer #icons img:hover{
     border: 2px solid rgb(233, 230, 230);
     border-radius: 5%;
     width: 30%;
-    margin: 0 auto 200px;
+    margin: 50px auto 100px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
