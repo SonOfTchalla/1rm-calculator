@@ -47,6 +47,7 @@ calcEL.addEventListener('click', function(){
 
             // when results are displayed, add a reset button
             reset.textContent = "Reset";
+            reset.id = "reset";
             containerEL.appendChild(reset);
 
             // set result displayed flag to true after diaplying result
@@ -62,6 +63,7 @@ calcEL.addEventListener('click', function(){
             resultDisplayed = false;
 
             warning.textContent = "Please put in valid weight and repitition values";
+            warning.id = "warning";
             containerEL.append(warning);
             warningDisplayed = true;
         }
