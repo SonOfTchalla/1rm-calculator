@@ -4,8 +4,17 @@ let repsEL = document.getElementById("reps");
 let calcEL = document.getElementById("calc");
 let containerEL = document.getElementById("container");
 
-// Create element to display the user's max
-let max = document.createElement("p");
+// Create elements to display the user's max
+let resultText = document.createElement("h4");
+let resultNum = document.createElement("p");
+let formula = document.createElement("p");
+
+
+//create a div to contain all the elements that display the user's max
+let max = document.createElement("div");
+max.appendChild(resultText);
+max.appendChild(resultNum);
+max.appendChild(formula);
 
 // Create element to reset the form
 let reset = document.createElement("button");
@@ -34,7 +43,9 @@ calcEL.addEventListener('click', function(){
         let reps = repsEL.value;
         let result = Math.round(calculateMax(weight, reps));
 
-        max.textContent = `Your One Rep Max is ${result} kg. Based on the Brzycki formula.`
+        resultText.textContent = `Your One Rep Max is:`
+        resultNum.textContent = `${result} kg or lbs`
+        formula.innerHTML = `Based on the <a href='https://doi.org/10.1080/07303084.1993.10606684' target='_blank'>Brzycki formula</a>.`
 
         //check if a result is already displayed
         if(resultDisplayed == false)
