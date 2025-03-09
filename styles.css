@@ -10,6 +10,10 @@ body{
     font-family: Montserrat, 'sans-serif';
 }
 
+a{
+    text-decoration: none;
+}
+
 #logo{
     height: 24px;
 }
@@ -56,6 +60,15 @@ body{
 #container h4, p{
     text-align: center;
     padding-bottom: 0.5rem;
+}
+
+#container a{
+    color: #d30;
+    text-decoration: underline;
+}
+
+#container a:hover{
+    color: blue;
 }
 
 #num, #reps{
