@@ -10,6 +10,9 @@ let max = document.createElement("p");
 // Create element to reset the form
 let reset = document.createElement("button");
 
+// Create element to display warning
+let warning = document.createElement("p");
+
 // function to calculate 1RM
 function calculateMax(weight, reps){
     // calculating max using the Bryzycki equation 
@@ -31,11 +34,15 @@ calcEL.addEventListener('click', function(){
         let reps = repsEL.value;
         let result = calculateMax(weight, reps);
 
-        max.textContent = `Your One Rep Max is ${Math.round(result)} kg`
+        max.textContent = `Your One Rep Max is ${Math.round(result)} kg. Based on the Brzycki formula.`
 
         //check if a result is already displayed
         if(resultDisplayed == false)
         {
+            //removes warning message if displayed and resets flag
+            warning.remove();
+            warningDisplayed = false;
+
             containerEL.appendChild(max) 
 
             // when results are displayed, add a reset button
@@ -49,7 +56,11 @@ calcEL.addEventListener('click', function(){
     else{
         if(!warningDisplayed)
         {
-            let warning = document.createElement("p");
+            //removes the result and reset button and resets the flag
+            max.remove();
+            reset.remove();
+            resultDisplayed = false;
+
             warning.textContent = "Please put in valid weight and repitition values";
             containerEL.append(warning);
             warningDisplayed = true;
