@@ -38,8 +38,7 @@ a{
     gap: 2rem;
 }
 
-#content{
-    /*border: 2px solid red;*/
+#content, #about-me{
     margin: 20px auto;
     text-align: center;
     padding: 5rem 0;
