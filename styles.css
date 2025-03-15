@@ -235,6 +235,10 @@ footer{
         align-self:center;
     }
 
+    #logo{
+        height: 40px; 
+    }
+
     #content, #about-me{
         width: 40%;
     }
