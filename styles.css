@@ -119,6 +119,31 @@ footer{
 
 /* Media Queries */ 
 
+/* Extra Small devices (landscape phones, 320px and up) */
+@media screen and (min-width: 320px) { 
+    #icons h3{
+        display: none;
+    }
+    #navbar{
+        flex-direction: column;
+        gap: 4vh;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #content, #about-me{
+        width: 85%;
+    }
+
+    #container{
+        width: 80%;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
     
@@ -131,12 +156,12 @@ footer{
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-    
+
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-    
+
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
