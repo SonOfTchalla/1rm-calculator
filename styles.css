@@ -196,15 +196,73 @@ footer{
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+    #navbar {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
 
+    #content, #about-me{
+        width: 50%;
+    }
+
+    #container{
+        width: 50%;
+    }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
+    body{
+        font-size:larger;
+    }
 
+    #content, #about-me{
+        width: 40%;
+    }
+
+    #container{
+        width: 40%;
+    }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) { 
+    body{
+        font-size: xx-large;
+    }
+
+    #navbar #logo{
+        align-self:center;
+    }
+
+    #content, #about-me{
+        width: 40%;
+    }
+
+    #container{
+        width: 50%;
+        padding: 3rem;
+        gap: 2rem;
+    }
+
+    #num, #calc, #reps, #reset{
+        border-radius: 500px;
+        font-size: xx-large;
+        padding: 15px 20px;
+    }
     
+    #calc{
+        padding: 20px;
+        color: #fff;
+        background-color: rgba(7, 230, 7, 0.932);
+    }
+    
+    #warning{
+        color: red;
+    }
+    
+    #reset{
+        color: #fff;
+        background-color: rgba(255, 6, 6, 0.932);
+    }
 }
