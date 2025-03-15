@@ -8,10 +8,10 @@
 
 body{
     font-family: Montserrat, 'sans-serif';
-    
+
     position: relative;
     min-width: 100%;
-    min-width: 100vh
+    min-width: 100vh;
 }
 
 a{
